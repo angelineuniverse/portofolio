@@ -8,26 +8,7 @@ class LandingPage extends Component {
             <div className="item-rounded rounded-full h-10 w-10 bg-black"></div>
           </div>
           <div className="flex gap-x-6 uppercase md:text-7xl font-cgbold">
-            <div className="title flex">
-              <div>a</div>
-              <div>n</div>
-              <div>g</div>
-              <div>e</div>
-              <div>l</div>
-              <div>i</div>
-              <div>n</div>
-              <div>e</div>
-            </div>
-            <div className="title flex">
-              <div>u</div>
-              <div>n</div>
-              <div>i</div>
-              <div>v</div>
-              <div>e</div>
-              <div>r</div>
-              <div>s</div>
-              <div>e</div>
-            </div>
+            <div id="angeline">angeline universe</div>
           </div>
           <p className="since text-center font-medium md:text-base mt-2 uppercase">
             Since 2024

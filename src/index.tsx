@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals.ts";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-gsap.registerPlugin(useGSAP);
+import { ReactLenis } from "lenis/react";
+gsap.registerPlugin(ScrollTrigger);
 
 const lazyWrap = (factory: () => Promise<any>) => {
   return async () => {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-root.render(<RouterProvider router={router} />);
+root.render(
+  <ReactLenis root>
+    <RouterProvider router={router} />
+  </ReactLenis>
+);
 
 reportWebVitals();

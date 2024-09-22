@@ -1,6 +1,9 @@
+import SplitType from "split-type";
+
 export function animasiLandingPage(tl) {
+    new SplitType('#angeline');
     tl.fromTo(
-        ".title div",
+        ".char",
         { opacity: 0, y: 30 },
         { y: 0, opacity: 1, duration: 0.15, stagger: 0.1 }
     ).fromTo(
