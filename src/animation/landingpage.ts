@@ -1,8 +1,11 @@
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 export function animasiLandingPage(tl) {
     new SplitType('#angeline');
-    tl.fromTo(
+    tl.set(".layout", {
+        display: "none"
+    }).fromTo(
         ".char",
         { opacity: 0, y: 30 },
         { y: 0, opacity: 1, duration: 0.15, stagger: 0.1 }
@@ -24,5 +27,10 @@ export function animasiLandingPage(tl) {
     ).to(".dashboard", {
         display: "none",
         duration: 0,
-    });
+    }).set(".layout", {
+        display: "block",
+        onComplete: () => {
+            ScrollTrigger.refresh(true);
+        },
+    })
 }
